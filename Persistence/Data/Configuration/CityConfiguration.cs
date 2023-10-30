@@ -17,7 +17,7 @@ namespace Persistence.Data.Configuration
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id);
 
-            builder.Property(P => P.NombreCity)
+            builder.Property(P => P.NameCity)
             .IsRequired()
             .HasMaxLength(50);
 

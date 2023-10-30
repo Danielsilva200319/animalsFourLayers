@@ -2,12 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.UnitOfWork;
+using AspNetCoreRateLimit;
+using Domain.Interfaces;
 
 namespace ApiAnimals.Extensions
 {
     public static class ApplicationServiceExtensions
     {
-        /* public static void ConfigureCors(this IServiceCollection services) =>
+        public static void ConfigureCors(this IServiceCollection services) =>
             services.AddCors(options =>
             {
                 options.AddPolicy(
@@ -44,6 +47,6 @@ namespace ApiAnimals.Extensions
                     }
                 };
             });
-        } */
+        }
     }
 }

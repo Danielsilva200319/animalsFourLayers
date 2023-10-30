@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace ApiAnimals.Dtos
 {
-    public class City : BaseEntity
+    public class CityDto
     {
+        public int Id { get; set; }
         public string NameCity { get; set; }
         public int IdDep { get; set; }
-        public Department Departments { get; set; }
-        public ClientAddress ClientAddresses { get; set; }
     }
 }

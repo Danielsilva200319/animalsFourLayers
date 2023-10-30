@@ -76,7 +76,7 @@ namespace Persistence.Data.Migrations
                     b.Property<int>("IdDep")
                         .HasColumnType("int");
 
-                    b.Property<string>("NombreCity")
+                    b.Property<string>("NameCity")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");

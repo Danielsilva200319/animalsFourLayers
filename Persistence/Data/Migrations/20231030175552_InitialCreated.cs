@@ -198,7 +198,7 @@ namespace Persistence.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    NombreCity = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                    NameCity = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     IdDep = table.Column<int>(type: "int", nullable: false)
                 },

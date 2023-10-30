@@ -11,7 +11,7 @@ using Persistence.Data;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(AnimalsContext))]
-    [Migration("20231030165632_InitialCreated")]
+    [Migration("20231030175552_InitialCreated")]
     partial class InitialCreated
     {
         /// <inheritdoc />
@@ -79,7 +79,7 @@ namespace Persistence.Data.Migrations
                     b.Property<int>("IdDep")
                         .HasColumnType("int");
 
-                    b.Property<string>("NombreCity")
+                    b.Property<string>("NameCity")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
