@@ -10,8 +10,6 @@ namespace Persistence.Data
 {
     public class AnimalsContext : DbContext
     {
-        private readonly DbContextOptions options;
-
         public AnimalsContext(DbContextOptions options) : base(options)
         {
         }
@@ -25,6 +23,10 @@ namespace Persistence.Data
         public DbSet<ClientAddress> ClientAddresses { get; set; }
         public DbSet<ClientPhone> ClientPhones { get; set; }
         public DbSet<Cita> Citas { get; set; }
+        public DbSet<Rol> Roles { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserRol> UserRoles { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

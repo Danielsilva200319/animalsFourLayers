@@ -21,6 +21,9 @@ namespace Application.UnitOfWork
         private ClientPhoneRepository _clientPhones;
         private ClientAddressRepository _clientAddresses;
         private CitaRepository _citas;
+        private IRefreshToken _RefreshTokens;
+        private IRol _Rols;
+        private IUser _Users;
 
         public UnitOfWork(AnimalsContext context)
         {
@@ -91,11 +94,11 @@ namespace Application.UnitOfWork
         {
             get
             {
-                if(_breeds == null)
-            {
-                _breeds = new BreedRepository(_context);
-            }
-            return _breeds;
+                if (_breeds == null)
+                {
+                    _breeds = new BreedRepository(_context);
+                }
+                return _breeds;
             }
         }
 
@@ -103,11 +106,11 @@ namespace Application.UnitOfWork
         {
             get
             {
-                if(_services == null)
-            {
-                _services = new ServiceRepository(_context);
-            }
-            return _services;
+                if (_services == null)
+                {
+                    _services = new ServiceRepository(_context);
+                }
+                return _services;
             }
         }
 
@@ -115,11 +118,11 @@ namespace Application.UnitOfWork
         {
             get
             {
-                if(_clientPhones == null)
-            {
-                _clientPhones = new ClientPhoneRepository(_context);
-            }
-            return _clientPhones;
+                if (_clientPhones == null)
+                {
+                    _clientPhones = new ClientPhoneRepository(_context);
+                }
+                return _clientPhones;
             }
         }
 
@@ -127,11 +130,11 @@ namespace Application.UnitOfWork
         {
             get
             {
-                if(_clientAddresses == null)
-            {
-                _clientAddresses = new ClientAddressRepository(_context);
-            }
-            return _clientAddresses;
+                if (_clientAddresses == null)
+                {
+                    _clientAddresses = new ClientAddressRepository(_context);
+                }
+                return _clientAddresses;
             }
         }
 
@@ -139,14 +142,49 @@ namespace Application.UnitOfWork
         {
             get
             {
-                if(_citas == null)
-            {
-                _citas = new CitaRepository(_context);
-            }
-            return _citas;
+                if (_citas == null)
+                {
+                    _citas = new CitaRepository(_context);
+                }
+                return _citas;
             }
         }
 
+        public IRefreshToken RefreshTokens
+        {
+            get
+            {
+                if (_RefreshTokens == null)
+                {
+                    _RefreshTokens = new RefreshTokenRepository(_context); 
+                }
+                return _RefreshTokens;
+            }
+        }
+
+        public IRol Rols
+        {
+            get
+            {
+                if (_Rols == null)
+                {
+                    _Rols = new RolRepository(_context); 
+                }
+                return _Rols;
+            }
+        }
+
+        public IUser Users
+        {
+            get
+            {
+                if (_Users == null)
+                {
+                    _Users = new UserRepository(_context); 
+                }
+                return _Users;
+            }
+        }
         public void Dispose()
         {
             _context.Dispose();
