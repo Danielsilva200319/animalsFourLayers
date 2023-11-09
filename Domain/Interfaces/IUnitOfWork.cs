@@ -17,6 +17,9 @@ namespace Domain.Interfaces
         IClientPhoneRepository ClientPhones { get; }
         IClientAddressRepository ClientAddresses { get; }
         ICitaRepository Citas { get; }
+        public IUser Users { get; }
+        public IRol Rols { get; }
+        public IRefreshToken RefreshTokens { get; }
         Task<int> SaveAsync();
     }
 }

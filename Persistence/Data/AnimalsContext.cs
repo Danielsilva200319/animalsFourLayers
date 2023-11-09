@@ -23,7 +23,7 @@ namespace Persistence.Data
         public DbSet<ClientAddress> ClientAddresses { get; set; }
         public DbSet<ClientPhone> ClientPhones { get; set; }
         public DbSet<Cita> Citas { get; set; }
-        public DbSet<Rol> Roles { get; set; }
+        public DbSet<Rol> Rols { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserRol> UserRoles { get; set; }
 

@@ -39,8 +39,8 @@ namespace Application.Repositories
         }
 
         public virtual async Task<(int totalRegistros, IEnumerable<T> registros)> GetAllAsync(
-            int pageIndex, 
-            int pageSize, 
+            int pageIndex,
+            int pageSize,
             string search
         )
         {

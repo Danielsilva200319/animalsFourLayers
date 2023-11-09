@@ -21,9 +21,9 @@ namespace Application.UnitOfWork
         private ClientPhoneRepository _clientPhones;
         private ClientAddressRepository _clientAddresses;
         private CitaRepository _citas;
-        private IRefreshToken _RefreshTokens;
-        private IRol _Rols;
-        private IUser _Users;
+        private IRefreshToken _refreshTokens;
+        private IRol _rols;
+        private IUser _users;
 
         public UnitOfWork(AnimalsContext context)
         {
@@ -154,11 +154,11 @@ namespace Application.UnitOfWork
         {
             get
             {
-                if (_RefreshTokens == null)
+                if (_refreshTokens == null)
                 {
-                    _RefreshTokens = new RefreshTokenRepository(_context); 
+                    _refreshTokens = new RefreshTokenRepository(_context); 
                 }
-                return _RefreshTokens;
+                return _refreshTokens;
             }
         }
 
@@ -166,11 +166,11 @@ namespace Application.UnitOfWork
         {
             get
             {
-                if (_Rols == null)
+                if (_rols == null)
                 {
-                    _Rols = new RolRepository(_context); 
+                    _rols = new RolRepository(_context); 
                 }
-                return _Rols;
+                return _rols;
             }
         }
 
@@ -178,11 +178,11 @@ namespace Application.UnitOfWork
         {
             get
             {
-                if (_Users == null)
+                if (_users == null)
                 {
-                    _Users = new UserRepository(_context); 
+                    _users = new UserRepository(_context); 
                 }
-                return _Users;
+                return _users;
             }
         }
         public void Dispose()
