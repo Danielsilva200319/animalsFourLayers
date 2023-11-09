@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Interfaces;
+using iText.StyledXmlParser.Jsoup.Parser;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Data;
 
@@ -18,7 +19,7 @@ namespace Application.Repositories
             _context = context;
         }
 
-        public async Task<User> GetByRefreshTokenAsync(string username)
+        public async Task<User> GetByRefreshTokenAsync(string refreshToken)
         {
             return await _context.Users
                     .Include(u => u.Rols)
